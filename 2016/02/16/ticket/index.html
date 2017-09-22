@@ -274,8 +274,12 @@
 
 
     <div class="post-body" itemprop="articleBody">
-
-      <h2>在页面一开始打开的时候，React会调用render函数构建一棵Dom树，在state/props发生改变的时候，render函数会被再次调用渲染出另外一棵树，接着，React会用对两棵树进行对比，找到需要更新的地方批量改动</h2>
+      <h2>react的渲染过程</h2>
+        <p>在页面一开始打开的时候，React会调用render函数构建一棵Dom树，在state/props发生改变的时候，render函数会被再次调用渲染出另外一棵树，接着，React会用对两棵树进行对比，找到需要更新的地方批量改动</p>
+      <h2>props和state的区别</h2>
+        <p>props书父组件更新子组件的手段（方法），state一般是组件本身更新的手段（方法）</p>
+      <h2>setState这个方法竟然是异步的，有些改变了但是他是异步处理的，所以有时会有你想不到的bug在<a href="https://segmentfault.com/q/1010000007352573?_ea=1341665">点击查看解决的方法</a></h2>
+      <h2>react 的生命周期 <a href='https://segmentfault.com/a/1190000006792687'>点击这里查看</a></h2>
     </div>
 
     <footer class="post-footer">
