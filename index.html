@@ -654,15 +654,7 @@
       
         
           
-          几百年没有更新了，现在将一个较为完美的模拟售票程序分享给大家
-功能
-REGISTER #注册
-FIND PASSWORD #找回密码
-VERIFACATION CODE #随机生成登录验证码
-MOBILE PHONE VERIFICATION #手机验证码（当然是模拟的）
-PAYMENT #支付方式（a. PHONE b. CREDIT c. CASH）
-CHECK WHETHER TIME IS CORRECT #检查选择的时间是否正确
-IDENTIFY WHETHER THE CITY EXISTS #检查城市是否存在（这里历尽艰辛，扒下了全世界大部分的城市了吧#在placelist里面）
+          首先是react的渲染过程：在页面一开始打开的时候，React会调用render函数构建一棵Dom树，在state/props发生改变的时候，render函数会被再次调用渲染出另外一棵树，接着，React会用对两棵树进行对比，找到需要更新的地方批量改动
           ...
 
           <div class="post-more-link text-center">
