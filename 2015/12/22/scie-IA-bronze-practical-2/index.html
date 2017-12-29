@@ -536,25 +536,7 @@
       (document.getElementsByTagName('head')[0]
       || document.getElementsByTagName('body')[0]).appendChild(ds);
     
-      var cvs = document.getElementById('canvas');
-      var ctx = cvs.getContext('2d')
-      cvs.height = 400;
-      cvs.width = 800;
-
-      cvs.onmousedown = function(e) {
-        //鼠标移动 鼠标弹起
-        ctx.moveTo(e.pageX,e.pageY);
-        ctx.strokeStyle='#f00';
-        ctx.lineWidth = 10; //粗细
-        cvs.onmousemove = function(e) {
-          ctx.lineTo(e.pageX,e.pageY);
-          ctx.stroke();
-        }
-        cvs.onmouseup = function(e) {
-          ctx.onmousemove = null;
-          ctx.onmouseup = null
-        }
-      }
+      
 
       // ctx.beginPath();
       // ctx.moveTo(100,100);
@@ -575,6 +557,27 @@
       // ctx.closePath();
     })();
    
+  </script>
+  <script>
+      var cvs = document.getElementById('canvas');
+      var ctx = cvs.getContext('2d')
+      cvs.height = 400;
+      cvs.width = 800;
+
+      cvs.onmousedown = function(e) {
+        //鼠标移动 鼠标弹起
+        ctx.moveTo(e.pageX,e.pageY);
+        ctx.strokeStyle='#f00';
+        ctx.lineWidth = 10; //粗细
+        cvs.onmousemove = function(e) {
+          ctx.lineTo(e.pageX,e.pageY);
+          ctx.stroke();
+        }
+        cvs.onmouseup = function(e) {
+          ctx.onmousemove = null;
+          ctx.onmouseup = null;
+        }
+      }
   </script>
 
 </body>
