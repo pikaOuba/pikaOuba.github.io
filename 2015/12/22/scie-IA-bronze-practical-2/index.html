@@ -55,6 +55,7 @@
 
   
       <canvas id='canvas'></canvas>
+      <button>蓝色</button><button>绿色</button>
 
 
   
@@ -80,6 +81,7 @@
         ctx.moveTo(e.pageX,e.pageY);
         ctx.strokeStyle='#f00';
         ctx.lineWidth = 2; //粗细
+        ctx.lineCap ='round';
         cvs.onmousemove = function(e) {
           ctx.lineTo(e.pageX,e.pageY);
           ctx.stroke();
