@@ -89,6 +89,11 @@
 </script>
 
   <title> canvas 例子 | Haiyan' Blog </title>
+  <style>
+    #canvas {
+      border:1px solid #000;
+    }
+  </style>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -252,7 +257,7 @@
 
     <div class="post-body" itemprop="articleBody">
       <div>这个就是啦</div>
-      <canvas>
+      <canvas id='canvas'>
 
       </canvas>
       
@@ -526,12 +531,6 @@
   
   <script type="text/javascript" src="/js/src/scrollspy.js?v=0.5.0"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=0.5.0"></script>
-
-
-
-  
-
-
   <script type="text/javascript" src="/js/src/bootstrap.js?v=0.5.0"></script>
 
 
@@ -553,23 +552,10 @@
       (document.getElementsByTagName('head')[0]
       || document.getElementsByTagName('body')[0]).appendChild(ds);
     })();
+    var cvs = doucument.getElementsById('canvas');
+    cvs.height = 400;
+    cvs.width = 800;
   </script>
-
-  
-    
-  
-
-
-
-
-
-  
-  
-  
-
-  
-
-  
 
 </body>
 </html>
