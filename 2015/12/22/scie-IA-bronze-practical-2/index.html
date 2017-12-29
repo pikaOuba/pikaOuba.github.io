@@ -79,6 +79,7 @@
       cvs.onmousedown = function(e) {
         //鼠标移动 鼠标弹起
         console.log(e.pageX,e.pageY)
+        ctx.beginPath();
         ctx.moveTo(e.pageX,e.pageY);
         ctx.strokeStyle= lineColor;
         ctx.lineWidth = 2; //粗细
@@ -88,12 +89,14 @@
           ctx.stroke();
         }
         cvs.onmouseup = function(e) {
+          ctx.closePath();
           cvs.onmousemove = null;
           cvs.onmouseup = null;
         }
       }
 
       function changeColor (color) {
+        console.log('colorcolor',color)
         lineColor = color
        }
   </script> 
