@@ -553,8 +553,14 @@
       || document.getElementsByTagName('body')[0]).appendChild(ds);
     })();
     var cvs = doucument.getElementsById('canvas');
-    cvs.height = 400;
-    cvs.width = 800;
+    var ctx = cvs.getContext('2d')
+    ctx.height = 400;
+    ctx.width = 800;
+
+    ctx.lineTo(100,100);
+    ctx.moveTo(200,200);
+    ctx.strokeStyle = '#f00';
+    ctx.stroke();
   </script>
 
 </body>
