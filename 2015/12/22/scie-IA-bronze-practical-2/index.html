@@ -557,10 +557,23 @@
       cvs.height = 400;
       cvs.width = 800;
 
+      ctx.beginPath();
       ctx.moveTo(100,100);
       ctx.lineTo(200,200);
+      ctx.lineTo(300,300);
       ctx.strokeStyle = '#f00';
+      ctx.lineWidth = 10; //粗细
+      ctx.lineCap ='round';//圆角
       ctx.stroke();
+      ctx.closePath();
+
+
+      ctx.beginPath();
+      ctx.moveTo(200,100);//现在的起点
+      ctx.lineTo(300,300);
+      ctx.strokeStyle = '#000';
+      ctx.stroke();
+      ctx.closePath();
     })();
    
   </script>
