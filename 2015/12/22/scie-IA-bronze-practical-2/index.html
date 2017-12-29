@@ -520,7 +520,28 @@
   
 
   
-    
+  <script>
+      var cvs = document.getElementById('canvas');
+      var ctx = cvs.getContext('2d')
+      cvs.height = 400;
+      cvs.width = 800;
+
+      cvs.onmousedown = function(e) {
+        //鼠标移动 鼠标弹起
+        console.log(e.pageX,e.pageY)
+        ctx.moveTo(e.pageX,e.pageY);
+        ctx.strokeStyle='#f00';
+        ctx.lineWidth = 2; //粗细
+        cvs.onmousemove = function(e) {
+          ctx.lineTo(e.pageX,e.pageY);
+          ctx.stroke();
+        }
+        cvs.onmouseup = function(e) {
+          cvs.onmousemove = null;
+          cvs.onmouseup = null;
+        }
+      }
+  </script> 
   
 
   <script type="text/javascript">
@@ -556,28 +577,7 @@
     })();
    
   </script>
-  <script>
-      var cvs = document.getElementById('canvas');
-      var ctx = cvs.getContext('2d')
-      cvs.height = 400;
-      cvs.width = 800;
 
-      cvs.onmousedown = function(e) {
-        //鼠标移动 鼠标弹起
-        console.log(e.pageX,e.pageY)
-        ctx.moveTo(e.pageX,e.pageY);
-        ctx.strokeStyle='#f00';
-        ctx.lineWidth = 2; //粗细
-        cvs.onmousemove = function(e) {
-          ctx.lineTo(e.pageX,e.pageY);
-          ctx.stroke();
-        }
-        cvs.onmouseup = function(e) {
-          cvs.onmousemove = null;
-          cvs.onmouseup = null;
-        }
-      }
-  </script>
 
 </body>
 </html>
