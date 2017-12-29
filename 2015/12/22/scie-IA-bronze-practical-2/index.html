@@ -98,22 +98,6 @@
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
 
-  
-
-
-
-
-
-
-
-
-
-
-  
-  
-    
-  
-
   <div class="container one-collumn sidebar-position-right page-post-detail ">
     <div class="headband"></div>
 
@@ -557,23 +541,38 @@
       cvs.height = 400;
       cvs.width = 800;
 
-      ctx.beginPath();
-      ctx.moveTo(100,100);
-      ctx.lineTo(200,200);
-      ctx.lineTo(300,300);
-      ctx.strokeStyle = '#f00';
-      ctx.lineWidth = 10; //粗细
-      ctx.lineCap ='round';//圆角
-      ctx.stroke();
-      ctx.closePath();
+      cvs.onmousedown = function(e) {
+        //鼠标移动 鼠标弹起
+        ctx.moveTo(e.pageX,e.pageY);
+        ctx.strokeStyle='#f00';
+        ctx.lineWidth = 10; //粗细
+        cvs.onmousemove = function(e) {
+          ctx.lineTo(e.pageX,e.pageY);
+          ctx.stroke();
+        }
+        cvs.onmouseup = function(e) {
+          ctx.onmousemove = null;
+          ctx.onmouseup = null
+        }
+      }
+
+      // ctx.beginPath();
+      // ctx.moveTo(100,100);
+      // ctx.lineTo(200,200);
+      // ctx.lineTo(300,300);
+      // ctx.strokeStyle = '#f00';
+      // ctx.lineWidth = 10; //粗细
+      // ctx.lineCap ='round';//线条的断尾圆角
+      // ctx.stroke();
+      // ctx.closePath();
 
 
-      ctx.beginPath();
-      ctx.moveTo(200,100);//现在的起点
-      ctx.lineTo(300,300);
-      ctx.strokeStyle = '#000';
-      ctx.stroke();
-      ctx.closePath();
+      // ctx.beginPath();
+      // ctx.moveTo(200,100);//现在的起点
+      // ctx.lineTo(300,300);
+      // ctx.strokeStyle = '#000';
+      // ctx.stroke();
+      // ctx.closePath();
     })();
    
   </script>
