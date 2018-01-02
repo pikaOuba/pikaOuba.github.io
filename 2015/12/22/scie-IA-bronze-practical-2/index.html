@@ -56,12 +56,7 @@
   
       <canvas id='canvas'></canvas>
       <button onClick="changeColor('blue')">蓝色</button><button onClick="changeColor('green')">绿色</button>
-
-
-  
-
-
-
+      <button onClick="clear()">清除</button>
 
 <script type="text/javascript">
   if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
@@ -98,6 +93,14 @@
       function changeColor (color) {
         console.log('colorcolor',color)
         lineColor = color
+       }
+
+       function clear() {
+        var cvs = document.getElementById('canvas');
+        var ctx = cvs.getContext('2d')
+        cvs.height = 400;
+        cvs.width = 800;
+        cxt.clearRect(0,0,c.width,c.height); 
        }
   </script> 
   
