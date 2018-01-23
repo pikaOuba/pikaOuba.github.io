@@ -57,37 +57,61 @@
 
 
 
-<meta name="description" content="Soon you will get that far
-But don’t feel lost on the road
-Soon the grades will come out
-And you can release the load
-&amp;nbsp;
-Thirty days but no more
-Have you got your mentors’ lore?
-The year is turnin">
+<meta name="description" content="ip协议的作用是:将各种数据包送到目的地;需要准确的送到目的地,需要的是IP地址和mac的地址,IP地址是可变, mac地址不变;Arp协议是根据IP地址查出,mac地址,mac地址是唯一的协议的本质:主要是为了解决通信问题而存在的,tcp/ip 是各类协议的总称;
+
+tcp/ip 主结构: 应用层,传输层,网络层,链路层
+应用层:当客户端发送http请求 
+传输层:对数据进行分割 =>出来的是ip据包,在分割好的报文上标记端口号还有序号;
+网络层:给报文装上目的地,一般是mac地址(是唯一的地址) 一般到了这一层就知道要去到哪个
+链路层:
+
+服务器的话就是一层层的逆向操作
+
+ip tcp dns
+
+  ip协议属于网络层
+
+  tcp协议属于传输层(可靠性) 
+    主要体现在闭着眼睛也要考察三次握手策略;(syn ack)
+
+  dns
+    也是在应用层: 提供域名到ip解析的作用. 输入域名的时候是 通过dns解析成IP
+
+http协议其实就是拉资源;
+生成针对目标web服务器的http请求报文
+
+
+tcp协议的职责(面向连接)
+为了方便通讯,将http请求报文分割成段 (按序号分为多个报文段)
+把每个报文段 可靠的发给对方 (三次握手)
+
+IP协议的职责:
+搜索对方的地址,一边中转一边传送;
+
+tcp协议的职责
+收到的是报文段,重组到达的报文段,按序号一原来的顺序重组报文
+
+http协议的职责:
+对web服务器请求的资源处理
+
+Icmp 
+ping 是 ICMP 协议最著名的应用
+
+udp
+无连接
+
+uri 和 url
+uri 是统一资源的标识符,uri某个协议方案表示的资源定位的标识符 http or ftp只是一种定位资源的方式,而非具体的定位位置
+">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Essential Ideology of Conscious Soul">
+<meta property="og:title" content="Tcp/Ip协议相关">
 <meta property="og:url" content="http://pikaOuba.github.io/2015/12/03/essential-ideology-of-conscious-soul/index.html">
 <meta property="og:site_name" content="Haiyan' Blog">
-<meta property="og:description" content="Soon you will get that far
-But don’t feel lost on the road
-Soon the grades will come out
-And you can release the load
-&amp;nbsp;
-Thirty days but no more
-Have you got your mentors’ lore?
-The year is turnin">
+<meta property="og:description" content="">
 <meta property="og:updated_time" content="2016-06-25T02:25:22.687Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Essential Ideology of Conscious Soul">
-<meta name="twitter:description" content="Soon you will get that far
-But don’t feel lost on the road
-Soon the grades will come out
-And you can release the load
-&amp;nbsp;
-Thirty days but no more
-Have you got your mentors’ lore?
-The year is turnin">
+<meta name="twitter:title" content="Tcp/Ip协议相关">
+<meta name="twitter:description" content="">
 
 
 
@@ -105,7 +129,7 @@ The year is turnin">
   };
 </script>
 
-  <title> Essential Ideology of Conscious Soul | Haiyan' Blog </title>
+  <title> Tcp/Ip协议相关 | Haiyan' Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -235,7 +259,7 @@ The year is turnin">
             
             
               
-                Essential Ideology of Conscious Soul
+                Tcp/Ip协议相关
               
             
           </h1>
@@ -295,63 +319,39 @@ The year is turnin">
 
 
     <div class="post-body" itemprop="articleBody">
-
+      <p>协议的本质:主要是为了解决通信问题而存在的,tcp/ip 是各类协议的总称;</p>
+      <p>tcp/ip 主结构: 应用层,传输层,网络层,链路层</p>
+      <h3>应用层:当客户端发送http请求 </h3>
+      <h3>传输层:对数据进行分割 =>出来的是ip据包,在分割好的报文上标记端口号还有序号;</h3>
+      <h3>网络层:给报文装上目的地,一般是mac地址(是唯一的地址) 一般到了这一层就知道要去到哪个</h3>
+      <h3>链路层:</h3>
+      <p>服务器的话就是一层层的逆向操作</p>
+      <h3>ip tcp dns</h3>
+      <p>ip协议属于网络层</p>
+      <p>tcp协议属于传输层(可靠性) </p>
+      <p>主要体现在闭着眼睛也要考察三次握手策略;(syn ack)</p>
+      <p>dns</p>
+      <p>也是在应用层: 提供域名到ip解析的作用. 输入域名的时候是 通过dns解析成IP</p>
+      <p>http协议其实就是拉资源;</p>
+      <p>生成针对目标web服务器的http请求报文</p>
+      <p>tcp协议的职责(面向连接)</p>
+      <p>为了方便通讯,将http请求报文分割成段 (按序号分为多个报文段)</p>
+      <p>把每个报文段 可靠的发给对方 (三次握手)</p>
+      <h3>IP协议的职责:</h3>
+      <p>搜索对方的地址,一边中转一边传送;</p>
+      <h3>tcp协议的职责:</h3>
+      <p>收到的是报文段,重组到达的报文段,按序号一原来的顺序重组报文</p>
+      <h3>http协议的职责:</h3>
+      <p>对web服务器请求的资源处理</p>
+      <h3>Icmp</h3>
+      <p>ping 是 ICMP 协议最著名的应用</p>
+      <h3>udp</h3>
+      <h3>无连接</h3>
+      <p>uri 和 url</p>
+      <p> uri 是统一资源的标识符,uri某个协议方案表示的资源定位的标识符 http or ftp只是一种定位资源的方式,而非具体的定位位置</p>
       
-      
-
-      
-        <p>Soon you will get that far</p>
-<p>But don’t feel lost on the road</p>
-<p>Soon the grades will come out</p>
-<p>And you can release the load</p>
-<p>&nbsp;</p>
-<p>Thirty days but no more</p>
-<p>Have you got your mentors’ lore?</p>
-<p>The year is turning dead</p>
-<p>There’s no time to lay on the bed</p>
-<p>&nbsp;</p>
-<p>Assessing what you’ve done</p>
-<p>It’s not easy to deal</p>
-<p>The examination they play</p>
-<p>You get a great chance to fail</p>
-<p>But the only thing they can know</p>
-<p>Nothing more than a tail</p>
-<p>&nbsp;</p>
-<p>The storm will never blunt you</p>
-<p>Cause you have the sharpest blade in your heart</p>
-<p>I know the mountains are stay still</p>
-<p>But how dare they can make you hurt?</p>
-<p>&nbsp;</p>
-<p>You have so many questions in mind</p>
-<p>You just don’t likely to express out</p>
-<p>Does it make sense to sign?</p>
-<p>People would only think you’re not fine</p>
-<p>&nbsp;</p>
-<p>Water will never overwhelm you</p>
-<p>Cause you have the highest wall in your heart</p>
-<p>I know the forests are yet so dark</p>
-<p>But how can they foul you with the powerless dirt?</p>
-<p>&nbsp;</p>
-<p>You have so many dreams to achieve</p>
-<p>Why don’t just leave everything to chase</p>
-<p>Does it matter what other people think?</p>
-<p>They would be shamed when you succeed</p>
-<p>&nbsp;</p>
-<p>Go and catch the giant condor</p>
-<p>What a waste to be a faineant wanderer</p>
-<p>Explore the beauty in the deeper sea</p>
-<p>There’s yet so much sight for you to see</p>
-<p>Deem that you are far so young?</p>
-<p>Don’t be regret when you are far so late</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
+     
+    
 
       
     </div>
@@ -421,7 +421,7 @@ The year is turnin">
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="2015/12/03/essential-ideology-of-conscious-soul/"
-           data-title="Essential Ideology of Conscious Soul" data-url="http://pikaOuba.github.io/2015/12/03/essential-ideology-of-conscious-soul/">
+           data-title="Tcp/Ip协议相关" data-url="http://pikaOuba.github.io/2015/12/03/essential-ideology-of-conscious-soul/">
       </div>
     
   </div>
